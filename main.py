@@ -181,7 +181,7 @@ def main():
 
                     elif z == 2:
                         delete_acount = input("Enter delete account name : ")
-                         User.account_number.remove(delete_acount)
+                         User.acounts.remove(delete_acount)
                     elif z == 3:
                         for acount in User.acounts:
                             print(f"Account name - {acount.name} , Account password - {acount.password} ")
