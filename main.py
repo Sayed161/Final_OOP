@@ -181,10 +181,12 @@ def main():
 
                     elif z == 2:
                         delete_acount = input("Enter delete account name : ")
-                         User.acounts.remove(delete_acount)
+                        del User.account_number[delete_acount]
+                        print(f"Account has delete of {delete_acount} ")
                     elif z == 3:
-                        for acount in User.acounts:
-                            print(f"Account name - {acount.name} , Account password - {acount.password} ")
+                        print("------- |    Showing All the Accounts   | --------" )
+                        for acount,values in User.account_number.items():
+                            print(f"Name - {acount}, Password - {values.password} ")
                     elif z == 4:
                         print(f"Total Available Balance of Bank {User.total_balance} ")
                     elif z == 5:
